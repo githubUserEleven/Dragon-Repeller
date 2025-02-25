@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>RPG - Dragon Repeller</title>
+  </head>
+  <body>
+    <div id="game">
+      <div id="stats">
+        <span class="stat"
+          >Опыт: <strong><span id="xpText">0</span></strong></span
+        >
+        <span class="stat"
+          >Здоровье: <strong><span id="healthText">100</span></strong></span
+        >
+        <span class="stat"
+          >Золото: <strong><span id="goldText">50</span></strong></span
+        >
+      </div>
+      <div id="location">
+        <img src="images/town.jpg" alt="Town Square" id="location-img" />
+        <img src="images/player.png" alt="Player" id="player-img" />
+        <img
+          src="images/monster.png"
+          alt="Monster"
+          id="monster-img"
+          style="display: none"
+        />
+      </div>
+      <div id="controls">
+        <button id="button1">
+          <i class="fas fa-store"></i> Пойти в магазин
+        </button>
+        <button id="button2">
+          <i class="fas fa-mountain"></i> Пойти в пещеру
+        </button>
+        <button id="button3">
+          <i class="fas fa-dragon"></i> Сразиться с драконом
+        </button>
+      </div>
+      <div id="monsterStats">
+        <span class="stat"
+          >Имя монстра: <strong><span id="monsterName"></span></strong
+        ></span>
+        <span class="stat"
+          >Здоровье: <strong><span id="monsterHealth"></span></strong
+        ></span>
+      </div>
+      <div id="text">
+        Добро пожаловать в Dragon Repeller. Вы должны победить дракона, который
+        мешает людям покинуть город. Вы находитесь на городской площади. Куда вы
+        хотите пойти? Используйте кнопки выше.
+      </div>
+    </div>
+    <audio id="attack-sound" src="sounds/attack.waw"></audio>
+    <audio id="win-sound" src="sounds/win_sound.wav"></audio>
+    <audio id="lose-sound" src="sounds/game_over.mp3"></audio>
+    <audio id="background-music" autoplay loop>
+      <source src="sounds/medieval_theme_music.wav" type="audio/mpeg" />
+    </audio>
+    <script src="script.js"></script>
+  </body>
+</html>
