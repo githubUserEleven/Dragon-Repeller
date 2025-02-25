@@ -1,0 +1,109 @@
+body {
+  background-color: #0a0a23;
+}
+
+img {
+  background-size: cover;
+}
+
+#text {
+  background-color: #0a0a23;
+  color: #ffffff;
+  padding: 10px;
+}
+
+#game {
+  max-width: 500px;
+  background-color: #ffffff;
+  color: #ffffff;
+  margin: 30px auto 0px;
+  padding: 10px;
+}
+
+#controls,
+#stats {
+  border: 1px solid #0a0a23;
+  padding: 10px;
+  color: #0a0a23;
+}
+
+#monsterStats {
+  display: none;
+  border: 1px solid #0a0a23;
+  padding: 5px;
+  color: #ffffff;
+  background-color: #c70d0d;
+}
+
+.stat {
+  padding-right: 10px;
+}
+
+button {
+  cursor: pointer;
+  color: #0a0a23;
+  background-color: #feac32;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border: 3px solid #feac32;
+  margin-bottom: 5px;
+}
+
+#location {
+  position: relative;
+  margin: 20px 0;
+}
+
+#location-img {
+  width: 100%;
+  max-width: 500px;
+  max-height: 200px;
+  border-radius: 10px;
+}
+
+#player-img {
+  position: absolute;
+  bottom: 20px;
+  left: 40%;
+  width: 150px;
+  height: auto;
+}
+
+#monster-img {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: auto;
+}
+
+@keyframes playerAttack {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes monsterAttack {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.player-attack {
+  animation: playerAttack 0.5s ease-in-out;
+}
+
+.monster-attack {
+  animation: monsterAttack 0.5s ease-in-out;
+}
